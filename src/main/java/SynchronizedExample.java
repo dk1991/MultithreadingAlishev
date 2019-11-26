@@ -10,6 +10,12 @@ public class SynchronizedExample {
         counter++;
     }
 
+    private void increment2() {
+        synchronized (this) { // блок синхронизации
+            counter++;
+        }
+    }
+
     /*
         1 thread: 100 -> 101 -> 101 -> 102 -> 102 -> 103 -> 103
         2 thread: 100 -> 101 -> 101
