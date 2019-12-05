@@ -48,7 +48,7 @@ class Task {
     public void secondThread() {
         lock.lock();
         increment();
-        lock.unlock();
+        lock.unlock(); // ВСЕГДА ВЫЗЫВАТЬ В FINALLY БЛОКЕ
     }
 
     public void showCounter() {
